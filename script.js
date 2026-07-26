@@ -7,12 +7,33 @@ const WORDS = [
   "tài năng",
   "tốt bụng",
   "giúp đỡ",
+  "chăm chỉ",
+  "kiên trì",
+  "sáng tạo",
+  "dũng cảm",
+  "trung thực",
+  "tự tin",
+  "kỷ luật",
+  "trách nhiệm",
+  "đoàn kết",
+  "khiêm tốn",
+  "lạc quan",
+  "biết ơn",
+  "tôn trọng",
+  "chia sẻ",
+  "vượt khó",
+  "dẫn đầu",
+  "chiến thắng",
+  "đạt mục tiêu",
+  "phá kỷ lục",
+  "truyền cảm hứng",
 ];
 
 const STORAGE_KEY = "ve-tu-gi-used-words";
 
 const wordDisplay = document.querySelector("#wordDisplay");
 const remainingCount = document.querySelector("#remainingCount");
+const totalCount = document.querySelector("#totalCount");
 const statusMessage = document.querySelector("#statusMessage");
 const randomButton = document.querySelector("#randomButton");
 const randomButtonText = document.querySelector("#randomButtonText");
@@ -39,9 +60,11 @@ function saveUsedWords(words) {
 
 function updateInterface() {
   const usedWords = readUsedWords();
-  const remaining = WORDS.length - usedWords.length;
+  const total = WORDS.length;
+  const remaining = total - usedWords.length;
 
   remainingCount.textContent = String(remaining);
+  totalCount.textContent = String(total);
   resetButton.disabled = usedWords.length === 0;
   randomButton.disabled = remaining === 0;
   randomButtonText.textContent =

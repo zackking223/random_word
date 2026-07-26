@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trò chơi bốc từ ngẫu nhiên để cùng nhau vẽ ở ngoài đời thật."
+    />
+    <title>Vẽ Từ Gì?</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <a class="logo" href="./" aria-label="Vẽ Từ Gì?">
+          <span aria-hidden="true">✦</span>
+          Vẽ Từ Gì?
+        </a>
+
+        <button id="resetButton" class="reset-button" type="button">
+          <span aria-hidden="true">↻</span>
+          Reset từ đã dùng
+        </button>
+      </header>
+
+      <section class="hero" aria-labelledby="pageTitle">
+        <div class="intro">
+          <p class="eyebrow">Trò chơi vẽ ngoài đời thật</p>
+          <h1 id="pageTitle">
+            Bốc một từ.<br />
+            <em>Vẽ thật vui!</em>
+          </h1>
+          <p class="description">
+            Nhấn nút để nhận một chủ đề ngẫu nhiên. Mỗi từ chỉ xuất hiện một
+            lần cho đến khi bạn reset.
+          </p>
+        </div>
+
+        <div class="game-card">
+          <p class="counter">
+            <strong id="remainingCount">6</strong> / 6 từ còn lại
+          </p>
+
+          <div id="wordDisplay" class="word-display" aria-live="polite">
+            Từ bí mật sẽ hiện ở đây
+          </div>
+
+          <button id="randomButton" class="random-button" type="button">
+            <span aria-hidden="true">✦</span>
+            <span id="randomButtonText">Bốc từ ngẫu nhiên</span>
+          </button>
+
+          <p id="statusMessage" class="status" aria-live="polite">
+            Sẵn sàng cho lượt vẽ đầu tiên!
+          </p>
+        </div>
+      </section>
+
+      <section class="suggestion" aria-labelledby="suggestionTitle">
+        <div class="suggestion-copy">
+          <span class="section-number" aria-hidden="true">01</span>
+          <div>
+            <p class="eyebrow">Cần một chút cảm hứng?</p>
+            <h2 id="suggestionTitle">Ảnh gợi ý cách vẽ</h2>
+            <p>
+              Khu vực này hiện dùng ảnh placeholder. Không có API hoặc API key
+              nào được đặt trong mã nguồn phía trình duyệt.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="placeholder"
+          role="img"
+          aria-label="Ảnh gợi ý đang được cập nhật"
+        >
+          <div class="placeholder-art" aria-hidden="true">
+            <span class="sun"></span>
+            <span class="hill hill-one"></span>
+            <span class="hill hill-two"></span>
+          </div>
+          <div class="placeholder-label">
+            <span class="picture-icon" aria-hidden="true">▧</span>
+            <strong>Ảnh gợi ý</strong>
+            <small>Sắp được cập nhật</small>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Chơi cùng nhau · Vẽ trên giấy · Không cần màn hình</p>
+        <span>Vẽ Từ Gì?</span>
+      </footer>
+    </main>
+  </body>
+</html>
